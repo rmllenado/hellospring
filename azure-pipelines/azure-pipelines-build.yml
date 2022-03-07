@@ -4,13 +4,13 @@
 # https://aka.ms/yaml
 
 trigger:
-- azure
+- master
 
 pool:
 #  vmImage: ubuntu-latest
   name: Default
   demands:
-   - agent.name -equals LLENADO2
+   - agent.name -equals $(AGENT-NAME)
 
 steps:
 - task: Maven@3
