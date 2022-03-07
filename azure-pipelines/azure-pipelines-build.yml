@@ -13,6 +13,13 @@ pool:
    - agent.name -equals $(AGENT-NAME)
 
 steps:
+- task: PowerShell@2
+  inputs:
+    targetType: 'inline'
+    script: |
+      # Write your PowerShell commands here.
+      
+      Write-Host $(AGENT-NAME)
 - task: Maven@3
   inputs:
     mavenPomFile: 'pom.xml'
