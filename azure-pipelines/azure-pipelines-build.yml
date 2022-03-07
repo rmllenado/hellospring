@@ -17,7 +17,7 @@ steps:
   inputs:
     targetType: 'inline'
     script: |
-      Write-Info "Running pipeline on agent $(AGENT-NAME)"
+      Write-Information "Running pipeline on agent $(AGENT-NAME)"
 - task: Maven@3
   inputs:
     mavenPomFile: 'pom.xml'
