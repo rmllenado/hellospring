@@ -10,16 +10,14 @@ pool:
 #  vmImage: ubuntu-latest
   name: Default
   demands:
-   - agent.name -equals $(AGENT-NAME)
+   - agent.name -equals LLENADO2
 
 steps:
 - task: PowerShell@2
   inputs:
     targetType: 'inline'
     script: |
-      # Write your PowerShell commands here.
-      
-      Write-Host $(AGENT-NAME)
+      Write-Info "Running pipeline on agent $(AGENT-NAME)"
 - task: Maven@3
   inputs:
     mavenPomFile: 'pom.xml'
