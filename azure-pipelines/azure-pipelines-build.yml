@@ -7,10 +7,10 @@ trigger:
 - master
 
 pool:
-#  vmImage: ubuntu-latest
-  name: Default
-  demands:
-   - agent.name -equals LLENADO2
+  vmImage: ubuntu-latest
+#  name: Default
+#  demands:
+#   - agent.name -equals LLENADO2
 
 steps:
 - task: Maven@3
